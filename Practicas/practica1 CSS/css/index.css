@@ -1,0 +1,81 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+header {
+    position: fixed;
+    background-color: #099c3d;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+header h1 {
+    color: #fff;
+    font-size: 40px;
+}
+
+footer h3{
+    color: #fff;
+    font-size: 30px;
+}
+
+footer {
+    position: fixed;
+    background-color: #099c3d;
+    width: 100%;
+    bottom: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.foto {
+    width: 12%;
+    border-radius: 50%;
+    float: left;
+}
+
+div {
+    float: left;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.limpiar {
+    clear: both;
+}
+
+section {
+    margin-top: 100px;
+    padding-left: 100px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 100px;
+}
+
+.nombre {
+    font-size: 24px;
+    color: #016aea;
+    font-weight: bolder;
+}
+
+.descripcion {
+    font-size: 20px;
+    color: #000;
+}
+
+.correo {
+    font-size: 20px;
+    color: #000;
+}
