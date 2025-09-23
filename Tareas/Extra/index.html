@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Práctica: Elementos Multimedia en HTML5</title>
+</head>
+<body>
+  <h1>Elementos Multimedia en HTML5</h1>
+
+  <p>En esta práctica se hará aprendizaje de cómo incluir y manipular videos, audios e imágenes SVG usando HTML5.</p>
+
+  <hr>
+
+  <h2>Insertar un Video con &lt;video&gt;</h2>
+  <p>La etiqueta &lt;video&gt; permite mostrar videos en una página web.  
+  Se pueden agregar atributos como:</p>
+  <ul>
+    <li>controls: muestra los controles de reproducción.</li>
+    <li>autoplay: inicia el video automáticamente (normalmente requiere muted).</li>
+    <li>loop: hace que el video se repita al terminar.</li>
+  </ul>
+
+  <p>Ejemplo con controls, autoplay y muted:</p>
+  <video width="480" controls autoplay muted >
+    <source src="videos/html_video.mp4" type="video/mp4">
+    Tu navegador no soporta el elemento de video.
+  </video>
+
+  <hr>
+
+  <h2>Insertar un Audio con &lt;audio&gt;</h2>
+  <p>La etiqueta &lt;audio&gt; permite reproducir sonido en la web.  
+  Los atributos funcionan igual que en &lt;video&gt;:</p>
+  <ul>
+    <li>controls: muestra el reproductor.</li>
+    <li>autoplay: inicia el audio automáticamente.</li>
+    <li>loop: repite la pista cuando termina.</li>
+  </ul>
+
+  <p>Ejemplo utilizando loop y controls:</p>
+  <audio controls loop>
+    <source src="audios/Beep - Sound Effect - YT TV.mp3" type="audio/mpeg">
+    Tu navegador no soporta el elemento de audio.
+  </audio>
+
+  <hr>
+
+  <h2>Insertar una Imagen SVG con &lt;img&gt;</h2>
+  <p>Un archivo SVG es un gráfico vectorial que no pierde calidad al escalarse.  
+  Se incluye con la etiqueta &lt;img&gt;.</p>
+
+  <p>Ejemplo:</p>
+  <img src="images/HTML5_logo_and_wordmark.svg" alt="Logo HTML5 SVG" width="480">
+
+  <hr>
+
+</body>
+</html>
