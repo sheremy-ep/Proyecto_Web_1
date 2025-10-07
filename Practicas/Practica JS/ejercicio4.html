@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ejercicio4</title>
+    <meta charset="utf-8">
+    <link href="favicon.png" rel="icon">
+</head>
+
+<body>
+    <header>
+        <h1>Ejercicio4</h1>
+    </header>
+
+    <section>
+        <h2>Introducción a Java Script</h2>
+        <p>
+            JavaScript (JS) es un lenguaje de programación que crea contenido web dinámico e interactivo, 
+            como animaciones, formularios y juegos, y es el lenguaje oficial de la World Wide Web. 
+            A diferencia de otros lenguajes de programación, JavaScript se ejecuta directamente en el 
+            navegador del usuario, permitiendo actualizar el contenido de una página sin recargarla, 
+            lo que mejora la experiencia del usuario.
+        </p>
+
+        <button onclick="random()">Elegir</button>
+        <button onclick="borrar()">Borrar</button>
+
+        <form name="resultado">
+            <div class="pt-5"></div>
+            <h4 class="text-dark">El número aleatorio es:</h4>
+            <div class="text-center">
+                <!-- readonly se usa para impedir que el usuario digite un número en el campo INPUT -->
+                <input type="text" name="rand" size="3" id="aleatorio" readonly>
+            </div>
+            <div class="pt-5"></div>
+        </form>
+
+        <img src="imagenes/aleatorio.jpg" alt="aleatorio" class="img-fluid">
+    </section>
+
+    <footer>
+        <h2>Derechos Reservados 2025</h2>
+    </footer>
+
+    <!-- programacion JS -->
+    <script src="js/ejercicio4.js"></script>
+</body>
+</html>
