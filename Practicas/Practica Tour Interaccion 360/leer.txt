@@ -1,0 +1,6 @@
+NO apaga el audio del video cuando el usuario
+abandona el infospot3.
+Tiene que hacerlo con el boton detener del video.
+
+
+
