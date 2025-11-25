@@ -1,0 +1,2 @@
+La pagina web debe ejecutarse en LIVE SERVER 
+para observar el video Lightbox 

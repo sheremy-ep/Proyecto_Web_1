@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lightbox Video YouTube</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<link href="favicon.png" rel="icon">
+<link href="css/lightboxvideo.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <h1 class="text-black">Vídeo Lightbox Youtube</h1>
+  
+  <!-- boton vídeo -->
+  <div class="pt-5"></div>
+  <p class="pt-5">
+    Le invitamos aprender sobre inteligencia artificial:    
+  </p>
+  <div class="text-center">
+    <img src="imagenes/ia.webp" alt="" class="img-fluid foto" >
+  </div>
+  <div class="pt-5"></div>
+  <button id="boton" onclick="ejecutar('video','youtube')">Ingresar</button>
+
+
+  <!-- estructura lightbox video (ejecutar la pagina web con LIVE SERVER) -->
+  <!-- contenedor principal del lightbox -->
+  <!-- al hacer clic fuera del área del video se va a ejecutar la función ocultar() -->
+  <div id="video" class="lightbox" onclick="ocultar('video','youtube')">
+
+  <!-- contenedor interno del lightbox -->
+  <!-- se debe usar event.stopPropagation() para evitar que el clic dentro cierre el lightbox -->
+    <div class="lightbox-container" onclick="event.stopPropagation();">
+   <!-- botón para cerrar el lightbox manualmente llamando a la función ocultar() -->
+      <button onclick="ocultar('video','youtube')" class="lightbox-close">Cerrar ✕</button>
+    <!-- contenedor del video para ajustar tamaño y mantener su proporción -->
+      <div class="video-container">
+      <!-- iframe donde se cargará el video de YouTube -->
+      <!-- el atributo 'src' se define dinámicamente desde la programacion JS -->
+      <!-- allow permite el autoplay y la reproducción de contenido protegido -->
+      <!-- allowfullscreen permite ver el video a pantalla completa -->
+        <iframe id="youtube" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- programacion -->
+  <script src="js/lightboxvideo.js"></script>
+
+
+</body>
+</html>
+
