@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Farmacia Vida Sana - Inicio</title>
+    <link rel="icon" href="img/faviconfarmacia.png">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  </head>
+
+  <body class="body-con-fondo">
+
+    <nav class="navbar navbar-fixed">
+      <div class="centrado">
+        <a href="#inicio" class="nav-btn">Inicio</a>
+        <a href="#productos" class="nav-btn">Productos</a>
+        <a href="#servicios" class="nav-btn">Servicios</a>
+        <a href="#contacto" class="nav-btn">Contacto</a>
+      </div>
+    </nav>
+
+    <header id="inicio" class="bannerwebnofondo centrado">
+      <h1>Farmacia Vida Sana</h1>
+      <h2 class="bajar2">Cuidamos de tu bienestar todos los días</h2>
+    </header>
+
+    <section id="productos" class="contenido centrado seccion-espaciado">
+      <h3>Sobre nosotros</h3>
+      <p>
+        En Farmacia Vida Sana ofrecemos atención personalizada y productos farmacéuticos de calidad.
+        Nuestro compromiso es brindar confianza y bienestar a cada cliente que nos visita.
+      </p>
+    </section>
+
+
+    <section class="contenido seccion-espaciado">
+      <div class="centrado">
+        <h3>Nuestros Productos Destacados</h3>
+        <p style="max-width: 700px; margin: 10px auto 30px; font-size: 20px;">
+          Conoce algunos de nuestros productos más populares
+        </p>
+      </div>
+
+      <div class="carousel-container">
+        <button class="carousel-btn carousel-btn-prev" onclick="cambiarSlide(-1)">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        
+        <div class="carousel">
+          <div class="carousel-slide activo">
+            <img src="img/producto1.jpg" alt="Vitaminas">
+            <h4>Vitaminas y Suplementos</h4>
+            <p>Fortalece tu sistema inmunológico</p>
+          </div>
+          
+          <div class="carousel-slide">
+            <img src="img/producto2.jpg" alt="Medicamentos">
+            <h4>Medicamentos de Calidad</h4>
+            <p>Recetados y de venta libre</p>
+          </div>
+          
+          <div class="carousel-slide">
+            <img src="img/producto3.jpg" alt="Cuidado Personal">
+            <h4>Cuidado Personal</h4>
+            <p>Todo lo que necesitas para tu higiene</p>
+          </div>
+        </div>
+
+        <button class="carousel-btn carousel-btn-next" onclick="cambiarSlide(1)">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+
+      <div class="carousel-dots">
+        <span class="dot activo" onclick="irASlide(0)"></span>
+        <span class="dot" onclick="irASlide(1)"></span>
+        <span class="dot" onclick="irASlide(2)"></span>
+      </div>
+    </section>
+
+    <section id="servicios" class="contenido centrado seccion-espaciado">
+      <h3>Servicios destacados</h3>
+      <ul class="lista-servicios">
+        <li>Medicamentos con receta</li>
+        <li>Productos naturales</li>
+        <li>Control de presión arterial</li>
+        <li>Asesoría farmacéutica gratuita</li>
+      </ul>
+    </section>
+
+    <section class="contenido seccion-espaciado">
+      <div class="centrado">
+        <h3>Busca tu producto</h3>
+        <p style="max-width: 700px; margin: 10px auto 30px; font-size: 20px;">
+          Utiliza nuestros filtros para encontrar lo que necesitas
+        </p>
+      </div>
+
+      <div class="contenedor-combos">
+        <div class="combo-card">
+          <h4>Categoría de Producto</h4>
+          <select id="combo-simple" class="select-combo">
+            <option value="">Selecciona una categoría</option>
+            <option value="medicamentos">Medicamentos</option>
+            <option value="vitaminas">Vitaminas y Suplementos</option>
+            <option value="cuidado">Cuidado Personal</option>
+            <option value="bebe">Productos para Bebé</option>
+          </select>
+        </div>
+
+        <div class="combo-card">
+          <h4>Categoría y Tipo</h4>
+          <div style="display: flex; flex-direction: column; gap: 15px;">
+            <div>
+              <label for="combo-categoria" class="label-combo">Categoría:</label>
+              <select id="combo-categoria" class="select-combo">
+                <option value="">Selecciona una categoría</option>
+                <option value="medicamentos">Medicamentos</option>
+                <option value="naturales">Productos Naturales</option>
+                <option value="higiene">Higiene</option>
+              </select>
+            </div>
+            
+            <div>
+              <label for="combo-tipo" class="label-combo">Tipo:</label>
+              <select id="combo-tipo" class="select-combo" disabled>
+                <option value="">Primero selecciona una categoría</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="combo-card">
+          <h4>Horario de Atención</h4>
+          <select id="combo-interactivo" class="select-combo">
+            <option value="">Selecciona un día</option>
+            <option value="lunes">Lunes a Viernes</option>
+            <option value="sabado">Sábado</option>
+            <option value="domingo">Domingo</option>
+            <option value="feriado">Días Feriados</option>
+          </select>
+          
+          <div id="info-horario" class="info-resultado"></div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="contenido seccion-espaciado">
+      <div class="centrado">
+        <h3>Nuestra Ubicación</h3>
+        <p style="max-width: 700px; margin: 10px auto 30px; font-size: 20px;">
+          Visítanos en San José, cerca del Parque La Sabana
+        </p>
+      </div>
+
+      <div class="mapa-container">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15720.155366475697!2d-84.11631738715818!3d9.935034800000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e342b9828947%3A0x61f1e7f25e07d86e!2sParque%20Metropolitano%20La%20Sabana!5e0!3m2!1ses!2scr!4v1234567890123!5m2!1ses!2scr" 
+          width="100%" 
+          height="450" 
+          style="border:0; border-radius: 10px;" 
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
+      </div>
+    </section>
+
+    <section id="contacto" class="contenido seccion-espaciado">
+      <div class="centrado">
+        <h3>¿Tienes alguna consulta?</h3>
+        <p style="max-width: 700px; margin: 10px auto 30px; font-size: 20px;">
+          Escríbenos, te responderemos lo antes posible.
+        </p>
+      </div>
+
+      <form class="formulario">
+        <div class="campo">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+        </div>
+
+        <div class="campo">
+          <label for="correo">Correo electrónico:</label>
+          <input type="email" id="correo" name="correo" placeholder="ejemplo@dominio.com" required>
+        </div>
+
+        <div class="campo">
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribe aquí tu consulta..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+      </form>
+    </section>
+
+    <footer class="footer centrado">
+      <div style="margin-bottom: 25px;">
+        <h4 style="margin-bottom: 15px; font-size: 22px;">Suscríbete a nuestro boletín</h4>
+        <p style="margin-bottom: 15px; font-size: 16px;">Recibe ofertas exclusivas y consejos de salud</p>
+        
+        <form class="formulario-suscripcion">
+          <input 
+            type="email" 
+            id="correo-suscripcion" 
+            name="correo-suscripcion" 
+            placeholder="tu@correo.com" 
+            required
+          >
+          <button type="submit" class="btn-suscribir">Suscribir</button>
+        </form>
+      </div>
+
+
+      <div class="redes-sociales">
+        <h4 style="margin-bottom: 15px; font-size: 20px;">Síguenos en redes sociales</h4>
+        <div class="iconos-redes">
+          <a href="https://facebook.com" target="_blank" class="icono-red">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://instagram.com" target="_blank" class="icono-red">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://youtube.com" target="_blank" class="icono-red">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+
+      <p style="margin-top: 25px;">© 2025 Farmacia Vida Sana - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="js/combos.js"></script>
+    <script src="js/carousel.js"></script>
+
+  </body>
+</html>
